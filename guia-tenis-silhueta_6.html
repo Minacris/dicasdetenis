@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tênis x Silhueta — Guia Mina Cris</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --preto: #111110;
+  --amarelo: #FCF731;
+  --branco: #FAFAF8;
+  --cinza: #F2F1ED;
+  --cinza-medio: #C8C7C0;
+  --cinza-escuro: #6B6A64;
+  --fonte-display: 'Cormorant Garamond', Georgia, serif;
+  --fonte-corpo: 'DM Sans', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--branco);
+  color: var(--preto);
+  font-family: var(--fonte-corpo);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CAPA */
+.capa {
+  background: var(--preto);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 64px 32px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.capa-tag {
+  font-family: var(--fonte-corpo);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amarelo);
+  margin-bottom: 16px;
+}
+.capa-titulo {
+  font-family: var(--fonte-display);
+  font-size: clamp(52px, 12vw, 88px);
+  font-weight: 300;
+  line-height: 0.95;
+  color: var(--branco);
+  margin-bottom: 8px;
+}
+.capa-titulo em { font-style: italic; color: var(--amarelo); }
+.capa-subtitulo {
+  font-family: var(--fonte-corpo);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--cinza-medio);
+  margin-top: 24px;
+  letter-spacing: 0.05em;
+}
+.capa-credito {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--cinza-escuro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* INTRO */
+.intro {
+  padding: 64px 32px;
+  background: var(--cinza);
+  border-bottom: 1px solid var(--cinza-medio);
+}
+.intro p {
+  font-family: var(--fonte-display);
+  font-size: clamp(20px, 4vw, 26px);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--preto);
+  max-width: 600px;
+}
+
+/* NÚMERO */
+.secao-numero {
+  font-family: var(--fonte-display);
+  font-size: 120px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--cinza-medio);
+  padding: 32px 32px 0;
+  opacity: 0.5;
+}
+
+/* ERRO */
+.erro {
+  padding: 0 32px 64px;
+  border-bottom: 1px solid var(--cinza-medio);
+}
+.erro-titulo {
+  font-family: var(--fonte-display);
+  font-size: clamp(28px, 6vw, 42px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 32px;
+  color: var(--preto);
+}
+.erro-titulo em { font-style: italic; color: var(--cinza-escuro); }
+
+/* PILLS */
+.pills { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.pill { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; border-radius: 4px; }
+.pill-achata { background: #FFF0EE; border-left: 3px solid #E24B4A; }
+.pill-alonga { background: #EDFAF4; border-left: 3px solid #1D9E75; }
+.pill-label { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; min-width: 60px; padding-top: 2px; }
+.pill-achata .pill-label { color: #E24B4A; }
+.pill-alonga .pill-label { color: #1D9E75; }
+.pill-texto { font-size: 15px; line-height: 1.5; color: var(--preto); }
+
+/* CITAÇÃO */
+.citacao {
+  font-family: var(--fonte-display);
+  font-size: clamp(18px, 4vw, 22px);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--cinza-escuro);
+  border-left: 2px solid var(--amarelo);
+  padding-left: 20px;
+  margin: 28px 0;
+  line-height: 1.4;
+}
+
+/* IMAGENS — sem corte, proporção original preservada */
+.img-full {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+.img-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 20px 0;
+}
+.img-grid-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.img-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin: 20px 0;
+}
+.img-grid-3 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.fonte-pinterest {
+  font-size: 10px;
+  color: var(--cinza-escuro);
+  letter-spacing: 0.08em;
+  text-align: right;
+  margin-top: 4px;
+}
+
+/* MEIA labels */
+.meia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 20px 0;
+}
+.meia-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.meia-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 4px;
+}
+.meia-label.mais { color: #E24B4A; }
+.meia-label.menos { color: var(--cinza-escuro); }
+
+/* SHOP NOW */
+.shop-now {
+  background: var(--preto);
+  padding: 40px 32px;
+}
+.shop-now-tag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amarelo);
+  margin-bottom: 8px;
+}
+.shop-now-titulo {
+  font-family: var(--fonte-display);
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 300;
+  color: var(--branco);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.shop-now-dica {
+  font-size: 13px;
+  color: var(--cinza-medio);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.produto-card {
+  background: #1A1A19;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+}
+.produto-img-box {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #2A2A28;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #444441;
+}
+.produto-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  object-position: center;
+  background: #F2F1ED;
+  display: block;
+}
+.produto-info { padding: 10px 12px; }
+.produto-marca { font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cinza-escuro); margin-bottom: 3px; }
+.produto-nome { font-size: 12px; color: var(--cinza-medio); line-height: 1.4; margin-bottom: 8px; }
+.produto-btn { display: block; width: 100%; background: var(--amarelo); color: var(--preto); text-align: center; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 8px; border-radius: 2px; text-decoration: none; }
+
+/* SHOPPING GUIDE */
+.shopping-guide { background: var(--preto); padding: 64px 32px 0; }
+.guide-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amarelo); margin-bottom: 16px; }
+.guide-titulo { font-family: var(--fonte-display); font-size: clamp(32px, 8vw, 56px); font-weight: 300; line-height: 1.05; color: var(--branco); margin-bottom: 12px; }
+.guide-titulo em { font-style: italic; color: var(--amarelo); }
+.guide-subtitulo { font-size: 13px; color: var(--cinza-medio); letter-spacing: 0.05em; margin-bottom: 48px; }
+.categoria { padding: 48px 0; border-top: 1px solid #2A2A28; }
+.categoria-nome { font-family: var(--fonte-display); font-size: clamp(24px, 5vw, 36px); font-weight: 400; color: var(--branco); line-height: 1.1; margin-bottom: 12px; }
+.categoria-dica { font-size: 12px; color: var(--cinza-escuro); line-height: 1.6; margin-bottom: 24px; padding: 12px; background: #1A1A19; border-left: 2px solid var(--amarelo); border-radius: 0 4px 4px 0; }
+.categoria-dica strong { color: var(--amarelo); font-weight: 500; }
+
+/* LOOKS INSPIRAÇÃO */
+.looks-section { padding: 40px 0 64px; border-top: 1px solid #2A2A28; }
+.looks-titulo { font-family: var(--fonte-display); font-size: 22px; font-weight: 300; color: var(--cinza-medio); margin-bottom: 6px; font-style: italic; }
+.looks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 16px; }
+.looks-grid img { width: 100%; height: auto; display: block; border-radius: 4px; }
+
+/* FECHAMENTO */
+.fechamento { background: var(--amarelo); padding: 64px 32px; }
+.fechamento-titulo { font-family: var(--fonte-display); font-size: clamp(28px, 7vw, 48px); font-weight: 300; line-height: 1.1; color: var(--preto); margin-bottom: 20px; }
+.fechamento-titulo em { font-style: italic; }
+.fechamento-texto { font-size: 15px; color: var(--preto); line-height: 1.7; opacity: 0.8; }
+.fechamento-assinatura { margin-top: 40px; font-family: var(--fonte-display); font-size: 18px; font-style: italic; color: var(--preto); }
+
+@media (min-width: 600px) {
+  .capa, .intro, .erro, .shop-now, .shopping-guide, .fechamento { padding-left: 48px; padding-right: 48px; }
+  .produtos-grid { grid-template-columns: repeat(3, 1fr); }
+  .looks-grid { grid-template-columns: repeat(4, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="capa">
+  <div class="capa-tag">Guia completo</div>
+  <h1 class="capa-titulo">Tênis<br><em>×</em><br>Silhueta</h1>
+  <p class="capa-subtitulo">Os tênis mais desejados do momento e como usar<br>sem achatar a sua silhueta</p>
+  <p class="capa-credito">por Mina Cris · especialista em calçados há 15 anos</p>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <p>Mais do que comprar o modelo da tendência só pelo hype, o que realmente muda a leitura da sua silhueta é o jeito que você usa o tênis. Proporção, cor e comprimento trabalhando juntos fazem a mesma calça, o mesmo tênis e os mesmos pés deixarem a perna parecer muito mais longa.</p>
+</section>
+
+<!-- ERRO 01 -->
+<div class="secao-numero">01</div>
+<section class="erro">
+  <h2 class="erro-titulo">A regra da<br><em>linha contínua</em></h2>
+  <div class="pills">
+    <div class="pill pill-achata">
+      <span class="pill-label">Achata</span>
+      <span class="pill-texto">Barra curta, com um pedaço de perna aparecendo entre a calça e o tênis</span>
+    </div>
+    <div class="pill pill-alonga">
+      <span class="pill-label">Alonga</span>
+      <span class="pill-texto">Barra mais longa, caindo de leve por cima do cano</span>
+    </div>
+  </div>
+  <p class="citacao">Tudo que interrompe a vertical encurta. Continuidade alonga.</p>
+  <!-- 1fy1 = trench coat bege | 1yjeO = jaqueta jeans -->
+  <div class="img-grid-2">
+    <img src="https://lh3.googleusercontent.com/d/1fy1cwTK81f3_0n3NtsAvGzmJt3UsZXq3" alt="Barra caindo sobre o tênis" loading="lazy">
+    <img src="https://lh3.googleusercontent.com/d/1yjeOHscZABB59rqBpLYL3ULQJumuYQMw" alt="Barra longa alonga" loading="lazy">
+  </div>
+  <!-- 1hltq = wide leg alonga | 18q74 = skinny achata -->
+  <div class="img-grid-2">
+    <img src="https://lh3.googleusercontent.com/d/1hltqSL6dZUgwC1k0CfbnicKBUApTQwUD" alt="Wide leg barra longa" loading="lazy">
+    <img src="https://lh3.googleusercontent.com/d/18q74_-pn1KVu30Or6gcCNWUZVJKrlC0l" alt="Skinny barra curta" loading="lazy">
+  </div>
+  <p class="fonte-pinterest">Fonte: Pinterest</p>
+</section>
+
+<!-- ERRO 02 -->
+<div class="secao-numero">02</div>
+<section class="erro">
+  <h2 class="erro-titulo">A lei dos<br><em>tons próximos</em></h2>
+  <div class="pills">
+    <div class="pill pill-achata">
+      <span class="pill-label">Achata</span>
+      <span class="pill-texto">Tênis em cor que briga com a parte de baixo — tipo preto com branco total</span>
+    </div>
+    <div class="pill pill-alonga">
+      <span class="pill-label">Alonga</span>
+      <span class="pill-texto">Tênis na mesma família de cor da peça, ou ao menos um bege que suaviza a transição</span>
+    </div>
+  </div>
+  <p class="citacao">Quanto menos a cor corta o pé do resto do look, mais longa a perna parece.</p>
+  <img class="img-full" src="https://lh3.googleusercontent.com/d/1izRihdUrdcrv6jXv9aPnwTNiXSthFnoD" alt="Tons próximos x contraste" loading="lazy">
+</section>
+
+<!-- SHOP NOW 01 — Tons Terrosos -->
+<div class="shop-now">
+  <p class="shop-now-tag">Shop the look</p>
+  <h3 class="shop-now-titulo">Tons que alongam</h3>
+  <p class="shop-now-dica">Com parte de baixo escura, escolha tênis que conversem com esse tom. Caramelo, marrom e bege criam continuidade sem apagar o look.</p>
+  <div class="produtos-grid">
+    <a href="https://tidd.ly/49zxU8t" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-sl-72-og-marrom-8909-66438241-1-zoom.jpg?ims=fit-in/300x300" alt="SL 72 OG Marrom" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+    <a href="https://tidd.ly/4uge6hH" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-handball-spezial-marrom-5909-39220051-1-zoom.jpg?ims=fit-in/300x300" alt="Handball Spezial Marrom" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+    <a href="https://tidd.ly/4ehyv1c" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-tokyo-adidas-originals-bege-6070-97655151-1-zoom.jpg?ims=fit-in/300x300" alt="Tokyo Bege" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+    <a href="https://tidd.ly/4x4hPBB" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/puma-tenis-feminino-puma-speedcat-og-marrom-1011-80364051-1-zoom.jpg?ims=fit-in/300x300" alt="Speedcat OG Marrom" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ERRO 03 -->
+<div class="secao-numero">03</div>
+<section class="erro">
+  <h2 class="erro-titulo">O equilíbrio de<br><em>cima e de baixo</em></h2>
+  <div class="pills">
+    <div class="pill pill-achata">
+      <span class="pill-label">Achata</span>
+      <span class="pill-texto">Chunky pesando na base com parte de cima solta e sem estrutura</span>
+    </div>
+    <div class="pill pill-alonga">
+      <span class="pill-label">Alonga</span>
+      <span class="pill-texto">O mesmo chunky com uma parte de cima mais estruturada, que puxa o olhar para cima</span>
+    </div>
+  </div>
+  <p class="citacao">Volume embaixo pede contraponto em cima. É só proporção.</p>
+  <!-- 1ccl = trench bege | 1TryS = polo marrom | 1CS9 = puffer preta -->
+  <div class="img-grid-3">
+    <img src="https://lh3.googleusercontent.com/d/1ccl_Mr0-2dtqXD1p_Zs5hzhvNlkbiaL9" alt="Trench coat bege com chunky" loading="lazy">
+    <img src="https://lh3.googleusercontent.com/d/1TrySGckPGrwec690rH0buPmOqd1ra0Sp" alt="Polo marrom com chunky" loading="lazy">
+    <img src="https://lh3.googleusercontent.com/d/1CS9cgUBAWUCfnYULHvNI66RChXUByEzp" alt="Puffer preta com chunky" loading="lazy">
+  </div>
+  <p class="fonte-pinterest">Fonte: Pinterest</p>
+</section>
+
+<!-- SHOP NOW 02 — Chunky -->
+<div class="shop-now">
+  <p class="shop-now-tag">Shop the look</p>
+  <h3 class="shop-now-titulo">Os chunky da vez</h3>
+  <p class="shop-now-dica">Chunky equilibrado é chunky com estrutura em cima. Blazer, jaqueta, shoulder pad. O volume dos pés pede um contraponto no tronco.</p>
+  <div class="produtos-grid">
+    <a href="https://tidd.ly/4opjDBD" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/new-balance-tenis-unissex-new-balance-740-branco-5804-12751051-1-zoom.jpg?ims=fit-in/300x300" alt="740 Branco" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ERRO 04 -->
+<div class="secao-numero">04</div>
+<section class="erro">
+  <h2 class="erro-titulo">O ponto perigoso<br><em>da midi</em></h2>
+  <div class="pills">
+    <div class="pill pill-achata">
+      <span class="pill-label">Achata</span>
+      <span class="pill-texto">Saia terminando exatamente no ponto mais largo da panturrilha</span>
+    </div>
+    <div class="pill pill-alonga">
+      <span class="pill-label">Alonga</span>
+      <span class="pill-texto">Comprimento descendo para perto do tornozelo</span>
+    </div>
+  </div>
+  <p class="citacao">Onde a saia termina é onde a perna parece parar.</p>
+  <img class="img-full" src="https://lh3.googleusercontent.com/d/1PI-p2Q5ntKREtQ8-IlU8gx6dv5dUY3WA" alt="Ponto perigoso da midi" loading="lazy">
+</section>
+
+<!-- ERRO 05 -->
+<div class="secao-numero">05</div>
+<section class="erro">
+  <h2 class="erro-titulo">A meia que você ama,<br><em>do jeito certo</em></h2>
+  <p style="font-size:15px;color:var(--cinza-escuro);margin-bottom:20px;">A meia aparente cria mais cortes na perna e pode deixar a silhueta um pouco mais baixa. Mas nem tudo na moda precisa ser sobre alongar. Se você ama a tendência, use com três ajustes.</p>
+
+  <!-- 1Tw3 = meia intro achata/menos | 1VMj = blocos de cores -->
+  <div class="meia-grid">
+    <div>
+      <img src="https://lh3.googleusercontent.com/d/1Tw3EUecLOFizQRhwIF6IoC8pJr32wGGb" alt="Meia aparente achata mais" loading="lazy" style="width:100%;height:auto;border-radius:4px;">
+      <p class="meia-label mais">Achata mais</p>
+    </div>
+    <div>
+      <img src="https://lh3.googleusercontent.com/d/1VMjflVbmyPY-gcfIUY7PZFasjWkyu7jb" alt="Blocos de cores" loading="lazy" style="width:100%;height:auto;border-radius:4px;">
+      <p class="meia-label menos">Blocos de cor</p>
+    </div>
+  </div>
+  <p class="fonte-pinterest">Fonte: Pinterest</p>
+
+  <div class="pills" style="margin-top:24px;">
+    <div class="pill pill-alonga">
+      <span class="pill-label">Ajuste 1</span>
+      <span class="pill-texto">Cano curto — quanto mais sobe na perna, mais corta a silhueta</span>
+    </div>
+  </div>
+  <!-- 1XLG = cano da meia -->
+  <img class="img-full" src="https://lh3.googleusercontent.com/d/1XLG8XsyIknKo5tSgkXvyeeHYMAKkQ-ce" alt="Altura do cano da meia" loading="lazy">
+
+  <div class="pills" style="margin-top:8px;">
+    <div class="pill pill-alonga">
+      <span class="pill-label">Ajuste 2</span>
+      <span class="pill-texto">Cintura alta — para a perna começar lá em cima</span>
+    </div>
+  </div>
+  <!-- 1nnb = cintura alta x baixa -->
+  <img class="img-full" src="https://lh3.googleusercontent.com/d/1nnb-g_HMrZQVW4p1tsCeqWhzWwZjNWKa" alt="Cintura alta x baixa" loading="lazy">
+
+  <div class="pills" style="margin-top:8px;">
+    <div class="pill pill-alonga">
+      <span class="pill-label">Ajuste 3</span>
+      <span class="pill-texto">Cores conversando — menos blocos de cor, leitura mais contínua da perna</span>
+    </div>
+  </div>
+  <!-- 1KYoI = cores ok | 10E9 = cores achata -->
+  <div class="img-grid-2">
+    <img src="https://lh3.googleusercontent.com/d/1KYoI-02KZc7TDFzHXzTa7_hEIkwFPLSs" alt="Cores conversando alonga" loading="lazy">
+    <img src="https://lh3.googleusercontent.com/d/10E9cEAj14UHnnLbmBiSpHQbpAr0wcfx8" alt="Blocos de cor achata" loading="lazy">
+  </div>
+  <p class="fonte-pinterest">Fonte: Pinterest</p>
+  <p class="citacao">Menos blocos de cor, leitura mais contínua da perna.</p>
+</section>
+
+<!-- ERRO 06 -->
+<div class="secao-numero">06</div>
+<section class="erro">
+  <h2 class="erro-titulo">O chunky que grita,<br><em>a perna que some</em></h2>
+  <div class="pills">
+    <div class="pill pill-achata">
+      <span class="pill-label">Achata</span>
+      <span class="pill-texto">Chunky muito robusto e colorido com comprimento mini</span>
+    </div>
+    <div class="pill pill-alonga">
+      <span class="pill-label">Alonga</span>
+      <span class="pill-texto">Com peça curta, um chunky mais delicado e neutro, ou um modelo slim</span>
+    </div>
+  </div>
+  <p class="citacao">Tênis que chama atenção demais joga o olhar para o chão. Com peça curta, o pé não pode gritar.</p>
+  <!-- 18vkW = chunky colorido x neutro -->
+  <img class="img-full" src="https://lh3.googleusercontent.com/d/18vkW-VPhSs7h2wA9-afldsaoLL1wWxf8" alt="Chunky colorido x chunky neutro" loading="lazy">
+</section>
+
+<!-- SHOP NOW 03 — Slim e Off White -->
+<div class="shop-now">
+  <p class="shop-now-tag">Shop the look</p>
+  <h3 class="shop-now-titulo">Slim para peças curtas</h3>
+  <p class="shop-now-dica">Com saia ou short curto, prefira tênis slim ou em tons neutros. O olhar sobe, a perna aparece.</p>
+  <div class="produtos-grid">
+    <a href="https://tidd.ly/49zxU8t" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-sl-72-og-marrom-8909-66438241-1-zoom.jpg?ims=fit-in/300x300" alt="SL 72 OG Marrom" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+    <a href="https://tidd.ly/4ehyv1c" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-tokyo-adidas-originals-bege-6070-97655151-1-zoom.jpg?ims=fit-in/300x300" alt="Tokyo Bege" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+    <a href="https://tidd.ly/4e4GZHR" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-tokyo-adidas-originals-branco-0671-04016741-1-zoom.jpg?ims=fit-in/300x300" alt="Tokyo Off White" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+    <a href="https://tidd.ly/49FF6Qp" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/nike-women-s-cortez-8744-23021941-1-zoom.jpg?ims=fit-in/300x300" alt="Cortez" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+    <a href="https://tidd.ly/4vLDDkn" target="_blank" class="produto-card">
+      <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-samba-og-off-white-6509-21497441-1-zoom.jpg?ims=fit-in/300x300" alt="Samba OG Off White" loading="lazy" style="width:100%;display:block;height:auto;">
+        <span class="produto-btn">Comprar</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- SHOPPING GUIDE -->
+<section class="shopping-guide">
+  <div>
+    <p class="guide-tag">Shopping Guide</p>
+    <h2 class="guide-titulo">Os tênis da<br>tendência<br><em>mais desejados</em></h2>
+    <p class="guide-subtitulo">Onde comprar e como usar sem achatar a sua silhueta<br>Seleção Mina Cris · especialista em calçados há 15 anos</p>
+  </div>
+
+  <!-- TONS TERROSOS -->
+  <div class="categoria">
+    <h3 class="categoria-nome">Tons Terrosos</h3>
+    <p class="categoria-dica"><strong>Dica da Mina:</strong> com parte de baixo escura, escolha sempre um tênis que conversa com esse tom. O contraste total entre tênis claro e roupa escura é o maior inimigo da silhueta longa.</p>
+    <div class="produtos-grid">
+      <a href="https://tidd.ly/49zxU8t" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-sl-72-og-marrom-8909-66438241-1-zoom.jpg?ims=fit-in/300x300" alt="SL 72 OG Marrom" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4uge6hH" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-handball-spezial-marrom-5909-39220051-1-zoom.jpg?ims=fit-in/300x300" alt="Handball Spezial Marrom" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4ehyv1c" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-tokyo-adidas-originals-bege-6070-97655151-1-zoom.jpg?ims=fit-in/300x300" alt="Tokyo Bege" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4x4hPBB" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/puma-tenis-feminino-puma-speedcat-og-marrom-1011-80364051-1-zoom.jpg?ims=fit-in/300x300" alt="Speedcat OG Marrom" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- SLIM -->
+  <div class="categoria">
+    <h3 class="categoria-nome">Slim</h3>
+    <p class="categoria-dica"><strong>Dica da Mina:</strong> slim com calça de barra longa é a combinação mais certeira para alongar. A linha não quebra em nenhum momento. Com meia aparente ou peças curtas, é sempre a escolha mais segura.</p>
+    <div class="produtos-grid">
+      <a href="https://tidd.ly/49zxU8t" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-sl-72-og-marrom-8909-66438241-1-zoom.jpg?ims=fit-in/300x300" alt="SL 72 OG Marrom" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4ehyv1c" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-tokyo-adidas-originals-bege-6070-97655151-1-zoom.jpg?ims=fit-in/300x300" alt="Tokyo Bege" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4e4GZHR" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-tokyo-adidas-originals-branco-0671-04016741-1-zoom.jpg?ims=fit-in/300x300" alt="Tokyo Off White" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4x4hPBB" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/puma-tenis-feminino-puma-speedcat-og-marrom-1011-80364051-1-zoom.jpg?ims=fit-in/300x300" alt="Speedcat OG Marrom" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/49FF6Qp" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/nike-women-s-cortez-8744-23021941-1-zoom.jpg?ims=fit-in/300x300" alt="Cortez" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- CHUNKY -->
+  <div class="categoria">
+    <h3 class="categoria-nome">Chunky</h3>
+    <p class="categoria-dica"><strong>Dica da Mina:</strong> evite chunky muito robusto com peças curtas e parte de cima solta. Quanto mais volume no pé, mais estrutura precisa ter em cima. Com blazer ou jaqueta, o chunky fica com proporção perfeita.</p>
+    <div class="produtos-grid">
+      <a href="https://tidd.ly/4opjDBD" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/new-balance-tenis-unissex-new-balance-740-branco-5804-12751051-1-zoom.jpg?ims=fit-in/300x300" alt="740 Branco" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- OFF WHITE -->
+  <div class="categoria">
+    <h3 class="categoria-nome">Off White</h3>
+    <p class="categoria-dica"><strong>Dica da Mina:</strong> off white com calça bege, creme ou jeans clarinho cria uma linha contínua linda. Muito mais elegante do que o branco total e muito mais alongador do que o contraste com preto.</p>
+    <div class="produtos-grid">
+      <a href="https://tidd.ly/4vLDDkn" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-samba-og-off-white-6509-21497441-1-zoom.jpg?ims=fit-in/300x300" alt="Samba OG Off White" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4e4GZHR" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-tokyo-adidas-originals-branco-0671-04016741-1-zoom.jpg?ims=fit-in/300x300" alt="Tokyo Off White" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- COLORIDOS -->
+  <div class="categoria">
+    <h3 class="categoria-nome">Coloridos da<br>Tendência</h3>
+    <p class="categoria-dica"><strong>Dica da Mina:</strong> tênis que chamam atenção são divertidos e fazem parte das tendências mais fortes do momento. Repita a cor em algum ponto do look. O vinho fica lindo no monocromático, com partes de baixo em vinho, marrom ou cinza. A oncinha pede looks neutros para ser a estrela.</p>
+    <div class="produtos-grid">
+      <a href="https://tidd.ly/4arVW5B" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-handebol-spezial-adidas-originals-vinho-9077-08106741-1-zoom.jpg?ims=fit-in/300x300" alt="Handball Spezial Vinho" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4emd6E0" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-samba-og-bege-7810-19220051-1-zoom.jpg?ims=fit-in/300x300" alt="Samba OG Oncinha" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+    </div>
+
+    <!-- LOOKS INSPIRAÇÃO COLORIDOS -->
+    <div class="looks-section">
+      <p class="looks-titulo">Inspiração de looks</p>
+      <!-- 1Jm2 | 1UA6 | 1QEA | 1kDZ -->
+      <div class="looks-grid">
+        <img src="https://lh3.googleusercontent.com/d/1Jm2DgpbYPh6-PvsR5kBqL7gZj_m7IkmA" alt="Look tiger amarelo" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1UA6T2XPqTbn5l84RPoHiSqrm760LO6QW" alt="Look tiger amarelo 2" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1QEA2TWG35RnvW2vPBhEFaNyAgpWNw_Zw" alt="Look marrom monocromático" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1kDZ8Lsz-l7BllXxE8NN6zf2vg4Pr9ARb" alt="Look vinho monocromático" loading="lazy">
+      </div>
+      <p class="fonte-pinterest" style="color:var(--cinza-escuro);">Fonte: Pinterest</p>
+    </div>
+  </div>
+
+  <!-- RETRÔ -->
+  <div class="categoria">
+    <h3 class="categoria-nome">Retrô</h3>
+    <p class="categoria-dica"><strong>Dica da Mina:</strong> tênis retrô são uma das tendências mais fortes de FW26. Combinam com wide leg, saia midi e qualquer peça com aquele ar nostálgico. Fuja do básico demais e deixe o tênis contar uma história no look.</p>
+    <div class="produtos-grid">
+      <a href="https://tidd.ly/49zxU8t" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-adidas-originals-sl-72-og-marrom-8909-66438241-1-zoom.jpg?ims=fit-in/300x300" alt="SL 72 OG Marrom" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/49FF6Qp" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/nike-women-s-cortez-8744-23021941-1-zoom.jpg?ims=fit-in/300x300" alt="Cortez" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+      <a href="https://tidd.ly/4e4GZHR" target="_blank" class="produto-card">
+        <img src="https://static.dafiti.com.br/p/adidas-originals-tenis-tokyo-adidas-originals-branco-0671-04016741-1-zoom.jpg?ims=fit-in/300x300" alt="Tokyo Off White" loading="lazy" style="width:100%;display:block;height:auto;"><span class="produto-btn">Comprar</span></div>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- FECHAMENTO -->
+<section class="fechamento">
+  <h2 class="fechamento-titulo">No fim,<br><em>é tudo proporção</em></h2>
+  <p class="fechamento-texto">Nenhuma dessas regras é obrigatória. São ferramentas para você decidir quando quer alongar e quando só quer usar o que ama. Agora que você lê a própria silhueta, use os links acima para encontrar os modelos certeiros sem perder tempo garimpando.</p>
+  <p class="fechamento-assinatura">Mina Cris</p>
+</section>
+
+</body>
+</html>
